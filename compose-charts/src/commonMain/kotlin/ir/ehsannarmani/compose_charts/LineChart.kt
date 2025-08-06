@@ -160,7 +160,7 @@ fun LineChart(
     }
     val indicatorAreaWidth = remember {
         if (indicatorProperties.enabled) {
-            indicators.maxOf { textMeasurer.measure(indicatorProperties.contentBuilder(it)).size.width } + (indicatorProperties.padding.value * density.density)
+            indicators.maxOf { textMeasurer.measure(indicatorProperties.contentBuilder(it)).size.width }.toFloat()
         } else {
             0f
         }
